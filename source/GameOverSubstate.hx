@@ -9,6 +9,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxTimer;
 import flixel.tweens.FlxEase;
 import flixel.tweens.FlxTween;
+import flixel.FlxSprite;
 
 class GameOverSubstate extends MusicBeatSubstate
 {
@@ -17,6 +18,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	var camFollowPos:FlxObject;
 	var updateCamera:Bool = false;
 	var playingDeathSound:Bool = false;
+	var restartSprite:FlxSprite;
+
 
 	var stageSuffix:String = "";
 
@@ -53,7 +56,14 @@ class GameOverSubstate extends MusicBeatSubstate
 		boyfriend = new Boyfriend(x, y, characterName);
 		boyfriend.x += boyfriend.positionArray[0];
 		boyfriend.y += boyfriend.positionArray[1];
+		boyfriend.visible = false;
 		add(boyfriend);
+
+		restartSprite = new FlxSprite(0, 0).loadGraphic(Paths.image('restart'));
+		restartSprite.alpha = 0;
+		restartSprite.screenCenter(X);
+		restartSprite.screenCenter(Y);
+		add(restartSprite);
 
 		camFollow = new FlxPoint(boyfriend.getGraphicMidpoint().x, boyfriend.getGraphicMidpoint().y);
 
@@ -72,6 +82,8 @@ class GameOverSubstate extends MusicBeatSubstate
 	}
 
 	var isFollowingAlready:Bool = false;
+
+	var isStarted = false;
 	override function update(elapsed:Float)
 	{
 		super.update(elapsed);
@@ -79,9 +91,18 @@ class GameOverSubstate extends MusicBeatSubstate
 		PlayState.instance.callOnLuas('onUpdate', [elapsed]);
 		if(updateCamera) {
 			var lerpVal:Float = CoolUtil.boundTo(elapsed * 0.6, 0, 1);
-			camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
+			//camFollowPos.setPosition(FlxMath.lerp(camFollowPos.x, camFollow.x, lerpVal), FlxMath.lerp(camFollowPos.y, camFollow.y, lerpVal));
 		}
-
+		
+		if(!isStarted)
+		{
+			new FlxTimer().start(1.8, function(tmr:FlxTimer)
+				{
+					coolStartDeath();
+					isStarted = false;
+					FlxTween.tween(restartSprite, {alpha: 1}, 4);
+				});
+		}
 		if (controls.ACCEPT)
 		{
 			endBullshit();
@@ -114,28 +135,7 @@ class GameOverSubstate extends MusicBeatSubstate
 			}
 
 			if (boyfriend.animation.curAnim.finished && !playingDeathSound)
-			{
-				if (PlayState.SONG.stage == 'tank')
-				{
-					playingDeathSound = true;
-					coolStartDeath(0.2);
-					
-					var exclude:Array<Int> = [];
-					//if(!ClientPrefs.cursing) exclude = [1, 3, 8, 13, 17, 21];
-
-					FlxG.sound.play(Paths.sound('jeffGameover/jeffGameover-' + FlxG.random.int(1, 25, exclude)), 1, false, null, true, function() {
-						if(!isEnding)
-						{
-							FlxG.sound.music.fadeIn(0.2, 1, 4);
-						}
-					});
-				}
-				else
-				{
-					coolStartDeath();
-				}
 				boyfriend.startedDeath = true;
-			}
 		}
 
 		if (FlxG.sound.music.playing)
@@ -156,7 +156,8 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	function coolStartDeath(?volume:Float = 1):Void
 	{
-		FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
+		if (!FlxG.sound.music.playing && !isEnding)
+			FlxG.sound.playMusic(Paths.music(loopSoundName), volume);
 	}
 
 	function endBullshit():Void
