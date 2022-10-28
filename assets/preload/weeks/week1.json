@@ -1,22 +1,45 @@
 {
-	"songs": [
-		["Euphoria", "dad", [146, 113, 253]],
-		["Nefarious", "dad", [146, 113, 253]],
-		["Divergence", "dad", [146, 113, 253]]
-	],
-
+	"storyName": "FNF: Character Disparity",
+	"difficulties": "Hard",
+	"hideFreeplay": false,
+	"weekBackground": "jam",
+	"weekBefore": "tutorial",
+	"startUnlocked": true,
 	"weekCharacters": [
 		"",
 		"",
 		""
 	],
-	"weekBackground": "jam",
-
-	"storyName": "FNF: Character Disparity",
-	"weekBefore": "tutorial",
-	"weekName": "Week 1",
-	"startUnlocked": true,
-
+	"songs": [
+		[
+			"Euphoria",
+			"cute",
+			[
+				255,
+				255,
+				255
+			]
+		],
+		[
+			"Nefarious",
+			"evil",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Divergence",
+			"evilD",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
 	"hideStoryMode": false,
-	"hideFreeplay": false
+	"hiddenUntilUnlocked": true,
+	"weekName": "Week 1"
 }

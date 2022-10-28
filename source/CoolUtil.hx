@@ -86,6 +86,13 @@ class CoolUtil
 
 		return daList;
 	}
+
+	public static function flashScreen(theCam:flixel.FlxCamera, howMuchTime:Float, ?theColor:flixel.util.FlxColor = 0xFFFFFFFF)
+	{
+		if(!ClientPrefs.flashing)
+			theCam.flash(theColor, howMuchTime, null, true);
+	}
+
 	public static function dominantColor(sprite:flixel.FlxSprite):Int{
 		var countByColor:Map<Int, Int> = [];
 		for(col in 0...sprite.frameWidth){
