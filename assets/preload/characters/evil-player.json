@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Evil Idle"
+		},
+		{
+			"offsets": [
+				49,
+				-1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Evil Left"
+		},
+		{
+			"offsets": [
+				43,
+				-125
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Evil Down"
+		},
+		{
+			"offsets": [
+				-7,
+				26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Evil Up"
+		},
+		{
+			"offsets": [
+				-70,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Evil Right"
+		},
+		{
+			"offsets": [
+				33,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "Evil missleft"
+		},
+		{
+			"offsets": [
+				42,
+				-79
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "Evil missdown"
+		},
+		{
+			"offsets": [
+				-8,
+				26
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "Evil missup"
+		},
+		{
+			"offsets": [
+				-61,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "Evil missright"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/evil girl",
+	"position": [
+		0,
+		40
+	],
+	"healthicon": "evil",
+	"flip_x": true,
+	"healthbar_colors": [
+		79,
+		79,
+		79
+	],
+	"camera_position": [
+		50,
+		-30
+	],
+	"sing_duration": 4,
+	"scale": 1
+}

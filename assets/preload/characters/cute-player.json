@@ -1,0 +1,122 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "Cute Idle"
+		},
+		{
+			"offsets": [
+				27,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "Cute Left"
+		},
+		{
+			"offsets": [
+				81,
+				-84
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "Cute Down"
+		},
+		{
+			"offsets": [
+				-13,
+				27
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "Cute Up"
+		},
+		{
+			"offsets": [
+				-14,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "Cute Right"
+		},
+		{
+			"offsets": [
+				28,
+				11
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT-miss",
+			"indices": [],
+			"name": "Cute missleft"
+		},
+		{
+			"offsets": [
+				80,
+				-64
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN-miss",
+			"indices": [],
+			"name": "Cute missdown"
+		},
+		{
+			"offsets": [
+				-12,
+				25
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP-miss",
+			"indices": [],
+			"name": "Cute missup"
+		},
+		{
+			"offsets": [
+				-6,
+				2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT-miss",
+			"indices": [],
+			"name": "Cute missright"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/cute girl",
+	"position": [
+		-970,
+		10
+	],
+	"healthicon": "cute",
+	"flip_x": true,
+	"healthbar_colors": [
+		255,
+		255,
+		255
+	],
+	"camera_position": [
+		-80,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

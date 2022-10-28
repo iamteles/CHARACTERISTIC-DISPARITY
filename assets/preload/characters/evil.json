@@ -1,121 +1,121 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				-5,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "Evil Idle"
+			"fps": 24,
+			"name": "Evil Idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				49,
 				-1
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "Evil Left"
+			"fps": 24,
+			"name": "Evil Left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				43,
 				-125
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "Evil Down"
+			"fps": 24,
+			"name": "Evil Down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-7,
 				26
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "Evil Up"
+			"fps": 24,
+			"name": "Evil Up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-70,
 				3
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "Evil Right"
+			"fps": 24,
+			"name": "Evil Right",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				33,
 				-3
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFTmiss",
-			"indices": [],
-			"name": "Evil missleft"
+			"fps": 24,
+			"name": "Evil missleft",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				42,
 				-79
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWNmiss",
-			"indices": [],
-			"name": "Evil missdown"
+			"fps": 24,
+			"name": "Evil missdown",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-8,
 				26
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUPmiss",
-			"indices": [],
-			"name": "Evil missup"
+			"fps": 24,
+			"name": "Evil missup",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-61,
 				2
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHTmiss",
-			"indices": [],
-			"name": "Evil missright"
+			"fps": 24,
+			"name": "Evil missright",
+			"indices": []
 		}
 	],
 	"no_antialiasing": false,
 	"image": "characters/evil girl",
 	"position": [
-		0,
-		40
+		710,
+		-20
 	],
 	"healthicon": "evil",
-	"flip_x": true,
+	"flip_x": false,
 	"healthbar_colors": [
 		79,
 		79,
 		79
 	],
 	"camera_position": [
-		50,
-		-30
+		-250,
+		-10
 	],
 	"sing_duration": 4,
 	"scale": 1
