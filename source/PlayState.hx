@@ -328,6 +328,8 @@ class PlayState extends MusicBeatState
 	// stores the last combo score objects in an array
 	public static var lastScore:Array<FlxSprite> = [];
 
+	private var meta:SongMetaTags;
+
 	override public function create()
 	{
 		//trace('Playback Rate: ' + playbackRate);
@@ -825,8 +827,8 @@ class PlayState extends MusicBeatState
 
 		switch(Paths.formatToSongPath(SONG.song))
 		{
-			case 'stress':
-				GameOverSubstate.characterName = 'bf-holding-gf-dead';
+			case 'euphoria':
+				GameOverSubstate.deathSoundName = 'Evil_girl_death';
 		}
 
 		if(isPixelStage) {
@@ -933,6 +935,7 @@ class PlayState extends MusicBeatState
 		if (!stageData.hide_girlfriend)
 		{
 			gf = new Character(0, 0, gfVersion);
+			gf.visible = false;
 			startCharacterPos(gf);
 			gf.scrollFactor.set(0.95, 0.95);
 			gfGroup.add(gf);
@@ -1103,6 +1106,12 @@ class PlayState extends MusicBeatState
 
 		FlxG.fixedTimestep = false;
 		moveCameraSection();
+
+		if(Assets.exists(Paths.txt(SONG.song.toLowerCase() + "/meta"))){
+			meta = new SongMetaTags(0, 144, SONG.song.toLowerCase());
+			meta.cameras = [camHUD];
+			add(meta);
+		}
 
 		healthBarBG = new AttachedSprite('healthBar');
 		healthBarBG.y = FlxG.height * 0.89;
@@ -1323,9 +1332,8 @@ class PlayState extends MusicBeatState
 
 				case 'ugh' | 'guns' | 'stress':
 					tankIntro();
-
 				default:
-					startCountdown();
+					startDialogue(dialogueJson);
 			}
 			seenCutscene = true;
 		}
@@ -1659,7 +1667,6 @@ class PlayState extends MusicBeatState
 			psychDialogue.cameras = [camHUD];
 			add(psychDialogue);
 		} else {
-			FlxG.log.warn('Your dialogue file is badly formatted!');
 			if(endingSong) {
 				endSong();
 			} else {
@@ -2157,6 +2164,9 @@ class PlayState extends MusicBeatState
 				{
 					case 0:
 						FlxG.sound.play(Paths.sound('intro3' + introSoundsSuffix), 0.6);
+						if(meta != null){
+							meta.start();
+						}
 					case 1:
 						countdownReady = new FlxSprite().loadGraphic(Paths.image(introAlts[0]));
 						countdownReady.cameras = [camHUD];
@@ -3919,6 +3929,19 @@ class PlayState extends MusicBeatState
 
 		deathCounter = 0;
 		seenCutscene = false;
+		
+		#if ACHIEVEMENTS_ALLOWED
+		if(achievementObj != null) {
+			return;
+		} else {
+			var achieve:String = checkForAchievement(['divergence']);
+
+			if(achieve != null) {
+				startAchievement(achieve);
+				return;
+			}
+		}
+		#end
 
 		var ret:Dynamic = callOnLuas('onEndSong', [], false);
 		if(ret != FunkinLua.Function_Stop && !transitioning) {
@@ -5234,9 +5257,62 @@ class PlayState extends MusicBeatState
 		var usedPractice:Bool = (ClientPrefs.getGameplaySetting('practice', false) || ClientPrefs.getGameplaySetting('botplay', false));
 		for (i in 0...achievesToCheck.length) {
 			var achievementName:String = achievesToCheck[i];
-			if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled && isStoryMode && storyPlaylist.length <= 0) {
+			if(!Achievements.isAchievementUnlocked(achievementName) && !cpuControlled) {
+				var unlock:Bool = false;
+				
+				if (achievementName.contains(WeekData.getWeekFileName()) && achievementName.endsWith('nomiss')) // any FC achievements, name should be "weekFileName_nomiss", e.g: "weekd_nomiss";
+				{
+					if(isStoryMode && campaignMisses + songMisses < 1 && CoolUtil.difficultyString() == 'HARD'
+						&& storyPlaylist.length <= 1 && !changedDifficulty && !usedPractice)
+						unlock = true;
+				}
+				switch(achievementName)
+				{
+					case 'ur_bad':
+						if(ratingPercent < 0.2 && !practiceMode) {
+							unlock = true;
+						}
+					case 'ur_good':
+						if(ratingPercent >= 1 && !usedPractice) {
+							unlock = true;
+						}
+					case 'roadkill_enthusiast':
+						if(Achievements.henchmenDeath >= 100) {
+							unlock = true;
+						}
+					case 'oversinging':
+						if(boyfriend.holdTimer >= 10 && !usedPractice) {
+							unlock = true;
+						}
+					case 'hype':
+						if(!boyfriendIdled && !usedPractice) {
+							unlock = true;
+						}
+					case 'two_keys':
+						if(!usedPractice) {
+							var howManyPresses:Int = 0;
+							for (j in 0...keysPressed.length) {
+								if(keysPressed[j]) howManyPresses++;
+							}
+
+							if(howManyPresses <= 2) {
+								unlock = true;
+							}
+						}
+					case 'toastie':
+						if(/*ClientPrefs.framerate <= 60 &&*/ !ClientPrefs.shaders && ClientPrefs.lowQuality && !ClientPrefs.globalAntialiasing) {
+							unlock = true;
+						}
+					case 'divergence':
+						if(Paths.formatToSongPath(SONG.song) == 'divergence' && !usedPractice) {
+							unlock = true;
+						}
+				}
+
+				if(unlock) {
 					Achievements.unlockAchievement(achievementName);
 					return achievementName;
+				}
 			}
 		}
 		return null;

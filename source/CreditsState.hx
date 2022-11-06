@@ -81,6 +81,13 @@ class CreditsState extends MusicBeatState
 		#end
 
 		var pisspoop:Array<Array<String>> = [ //Name - Icon name - Description - Link - BG Color
+			['Characteristic Disparity Team'],
+			['teles',		'teles',		'Director, Musician and Coder',								'https://www.youtube.com/c/telesfnf/featured',	'444444'],
+			['Cocopuffs',		'Corruption',		'Director, Artist and Musician',								'https://twitter.com/file_corruption',	'444444'],
+			['CharaWhy',		'Chara',		'Musician',								'https://www.youtube.com/channel/UCiEUXX_YWxVevGxSRYCM5Cw',	'444444'],
+			['Diamond',		'diamond',		'Charter',								'https://twitter.com/DiamonDiglett42',	'444444'],
+			['Blaze',		'blaze',		'Coding Helper',								'https://www.youtube.com/channel/UCxHjDEbm-RWWr_PSodXAZbg',	'444444'],
+			['YaBoiJustin',		'justin',		'Awesome',								'https://mobile.twitter.com/yaboijustingg',	'444444'],
 			['Psych Engine Team'],
 			['Shadow Mario',		'shadowmario',		'Main Programmer of Psych Engine',								'https://twitter.com/Shadow_Mario_',	'444444'],
 			['RiverOaken',			'river',			'Main Artist/Animator of Psych Engine',							'https://twitter.com/RiverOaken',		'B42F71'],

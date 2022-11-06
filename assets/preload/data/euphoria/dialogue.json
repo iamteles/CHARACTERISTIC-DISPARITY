@@ -1,0 +1,108 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.04,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Hiiiiiiiiiii :D"
+		},
+		{
+			"sound": "",
+			"speed": 0.15,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "..."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "Bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "My name is Bella! :P"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "Bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "And you are?????? ;3"
+		},
+		{
+			"sound": "",
+			"speed": 0.105,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "..."
+		},
+		{
+			"sound": "",
+			"speed": 0.065,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "why do you care"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "Bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "I wanna be your friend! :DD"
+		},
+		{
+			"sound": "",
+			"speed": 0.08,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "go away"
+		},
+		{
+			"sound": "",
+			"speed": 0.055,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Come on!!!! :B"
+		},
+		{
+			"sound": "",
+			"speed": 0.04,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "We should rap battle! :P"
+		},
+		{
+			"sound": "",
+			"speed": 0.06,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "ugh fine"
+		},
+		{
+			"sound": "",
+			"speed": 0.06,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "but you leave me alone"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Yayyyyyyyyy :DDDDDDDDD"
+		}
+	]
+}

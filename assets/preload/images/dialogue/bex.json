@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "right",
+	"position": [
+		-50,
+		-130
+	],
+	"scale": 1,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "evil talk",
+			"idle_name": "evil talk0007"
+		}
+	],
+	"image": "evil girl talking"
+}

@@ -24,7 +24,7 @@ class GameOverSubstate extends MusicBeatSubstate
 	var stageSuffix:String = "";
 
 	public static var characterName:String = 'bf-dead';
-	public static var deathSoundName:String = 'fnf_loss_sfx';
+	public static var deathSoundName:String = 'Good_girl_death';
 	public static var loopSoundName:String = 'gameOver';
 	public static var endSoundName:String = 'gameOverEnd';
 
@@ -32,7 +32,7 @@ class GameOverSubstate extends MusicBeatSubstate
 
 	public static function resetVariables() {
 		characterName = 'bf-dead';
-		deathSoundName = 'fnf_loss_sfx';
+		deathSoundName = 'Good_girl_death';
 		loopSoundName = 'gameOver';
 		endSoundName = 'gameOverEnd';
 	}

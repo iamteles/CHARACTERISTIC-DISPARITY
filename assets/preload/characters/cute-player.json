@@ -62,7 +62,7 @@
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "singLEFT-miss",
+			"anim": "singLEFTmiss",
 			"indices": [],
 			"name": "Cute missleft"
 		},
@@ -73,7 +73,7 @@
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "singDOWN-miss",
+			"anim": "singDOWNmiss",
 			"indices": [],
 			"name": "Cute missdown"
 		},
@@ -84,7 +84,7 @@
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "singUP-miss",
+			"anim": "singUPmiss",
 			"indices": [],
 			"name": "Cute missup"
 		},
@@ -95,7 +95,7 @@
 			],
 			"loop": false,
 			"fps": 24,
-			"anim": "singRIGHT-miss",
+			"anim": "singRIGHTmiss",
 			"indices": [],
 			"name": "Cute missright"
 		}

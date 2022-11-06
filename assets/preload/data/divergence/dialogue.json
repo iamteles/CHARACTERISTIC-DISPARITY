@@ -1,0 +1,44 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "WOW THAT WAS AMAZING :OOOOOOO"
+		},
+		{
+			"sound": "",
+			"speed": 0.06,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "...thanks?"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Can we please do one more?? :33333"
+		},
+		{
+			"sound": "",
+			"speed": 0.065,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "..."
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "fine."
+		}
+	]
+}

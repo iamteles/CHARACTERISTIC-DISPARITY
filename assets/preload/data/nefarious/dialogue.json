@@ -1,0 +1,44 @@
+{
+	"dialogue": [
+		{
+			"sound": "",
+			"speed": 0.06,
+			"portrait": "Bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "aight you got your rap battle"
+		},
+		{
+			"sound": "",
+			"speed": 0.06,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "leave"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "But that was so fun! :_)"
+		},
+		{
+			"sound": "",
+			"speed": 0.05,
+			"portrait": "bella",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "Ill let you choose the song this time!!! :)"
+		},
+		{
+			"sound": "",
+			"speed": 0.09,
+			"portrait": "bex",
+			"boxState": "normal",
+			"expression": "talk",
+			"text": "..."
+		}
+	]
+}

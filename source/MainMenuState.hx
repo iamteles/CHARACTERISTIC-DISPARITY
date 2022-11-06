@@ -33,13 +33,9 @@ class MainMenuState extends MusicBeatState
 		'story_mode',
 		'freeplay',
 		#if MODS_ALLOWED 'mods', #end
-		#if ACHIEVEMENTS_ALLOWED 'awards', #end
 		'credits',
 		'options'
 	];
-	
-	var optionShitDescription:Array<String> = ['PLAY THE STORY MODE WEEKS', 'PLAY ANY SONG IN THE MOD', 'THE PEOPLE WHO MADE THE MOD', 'CHANGE STUFF IN THE GAME'];
-	
 	
 	var rightArrow:FlxSprite;
 	var leftArrow:FlxSprite;

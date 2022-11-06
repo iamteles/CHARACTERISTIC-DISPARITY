@@ -1,0 +1,24 @@
+{
+	"dialogue_pos": "left",
+	"position": [
+		10,
+		-130
+	],
+	"scale": 1,
+	"animations": [
+		{
+			"anim": "talk",
+			"loop_offsets": [
+				0,
+				0
+			],
+			"idle_offsets": [
+				0,
+				0
+			],
+			"loop_name": "cute talk",
+			"idle_name": "cute talk0007"
+		}
+	],
+	"image": "cute girl talking"
+}
